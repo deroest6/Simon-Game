@@ -6,4 +6,4 @@ This is my take on the classic Simon Game. Test your memory by remembering the s
 HTML, CSS, Javascript
 
 ### Test Your Skills
-https://deroest6.github.io/Simon-Game/
+(https://deroest6.github.io/Simon-Game/) - Simon Game
