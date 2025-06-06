@@ -12,3 +12,7 @@ HTML, CSS, Javascript
 
 1. Install dependencies with `npm install`.
 2. Run the test suite with `npm test`.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
