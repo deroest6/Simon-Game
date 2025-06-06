@@ -79,7 +79,7 @@ function nextSequence() {
 
   // Pushes Random Color to gamePattern[]
   // There are four colours in buttonColors, generate a value between 0-3
-  var randomNumber = Math.floor(Math.random() * buttonColors.length);
+  var randomNumber = Math.floor(Math.random() * 4);
   var randomChosenColor = buttonColors[randomNumber];
   gamePattern.push(randomChosenColor);
 
