@@ -33,7 +33,7 @@ if (typeof $ !== "undefined") {
 
 
 
-// Checks the usersChosenColor to the current gamePattern IF true you advance to next level
+// Checks the user's chosen color against the current game pattern; if correct, advance to the next level
 
 
 function checkAnswer(currentLevel) {
