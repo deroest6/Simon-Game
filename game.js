@@ -7,27 +7,30 @@ var level = 0;
 
 var started = false;
 
-$(document).keydown(function() {
-  if (!started) { // Start = False
-    $("h1").text("Level " + level);
-    nextSequence();
-    started = true;
-  }
-});
+if (typeof $ !== "undefined") {
+  $(document).keydown(function() {
+    if (!started) { // Start = False
+      $("h1").text("Level " + level);
+      nextSequence();
+      started = true;
+    }
+  });
 
 
-// Takes the color user clicks on and returns it to userClickedPattern
-$(".btn").click(function() {
+  // Takes the color user clicks on and returns it to userClickedPattern
+  $(".btn").click(function() {
 
-  var userChosenColor = $(this).attr("id");
-  userClickedPattern.push(userChosenColor);
+    var userChosenColor = $(this).attr("id");
+    userClickedPattern.push(userChosenColor);
 
-  playSound(userChosenColor);
-  animatePress(userChosenColor);
+    playSound(userChosenColor);
+    animatePress(userChosenColor);
 
-  console.log("Start checking answer...");
-  checkAnswer(userClickedPattern.length - 1);
-});
+    console.log("Start checking answer...");
+    checkAnswer(userClickedPattern.length - 1);
+  });
+}
+
 
 
 // Checks the usersChosenColor to the current gamePattern IF true you advance to next level
@@ -103,6 +106,18 @@ function animatePress(currentColor) {
   setTimeout(function() {
     $("#" + currentColor).removeClass("pressed");
   }, 100);
+}
+
+if (typeof module !== "undefined" && module.exports) {
+  module.exports = {
+    startOver: startOver,
+    getLevel: function () { return level; },
+    getGamePattern: function () { return gamePattern; },
+    getUserClickedPattern: function () { return userClickedPattern; },
+    setLevel: function (val) { level = val; },
+    setGamePattern: function (val) { gamePattern = val; },
+    setUserClickedPattern: function (val) { userClickedPattern = val; }
+  };
 }
 
 

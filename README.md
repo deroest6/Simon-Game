@@ -7,3 +7,8 @@ HTML, CSS, Javascript
 
 ### Test Your Skills
 (https://deroest6.github.io/Simon-Game/) - Simon Game
+
+### Running Tests
+
+1. Install dependencies with `npm install`.
+2. Run the test suite with `npm test`.
