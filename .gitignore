@@ -1,0 +1,10 @@
+# Node dependencies
+node_modules/
+# npm debug log
+npm-debug.log*
+
+# macOS
+.DS_Store
+
+# Optional asset archive
+Free_Arcade_Button_Vector_01_eps.zip
